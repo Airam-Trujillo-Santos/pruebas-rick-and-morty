@@ -449,7 +449,7 @@ Aparece en el episodio: https://rickandmortyapi.com/api/episode/3
 //Debe salir una relación similar a esta: 1 - Rick Sanchez - Earth (Replacement Dimension)
 /* CÓDIGO
 
-*/
+
 let numEpisodio=3;
 function inicializarEventos() {
     conexion.onreadystatechange = procesarEventos;
@@ -469,7 +469,7 @@ function procesarEventos() {
             xhr.addEventListener("readystatechange", function() {
                 if(this.readyState === 4) {
                     personaje=JSON.parse(this.responseText);
-                    console.log(personaje.id+" - "+personaje.name+ " - "+personaje.location.name);
+                    console.log(numEpisodio+" - "+personaje.name+ " - "+personaje.location.name);
                     
                 }
             });
@@ -482,6 +482,11 @@ function procesarEventos() {
        
     }
 }
+*/
 /*
 RESULTADO
+3 - Rick Sanchez - Earth (Replacement Dimension)
+3 - Morty Smith - Earth (Replacement Dimension)
+3 - Alexander - Anatomy Park
+...
  */
